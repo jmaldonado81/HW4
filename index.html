@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Play With Balloon</title>
+    <style>
+        p {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        p2 {
+            text-align: center;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Play with Balloon</h1>
+    <p id ="balloon">🎈</p>
+    
+   
+    <script>
+        let para = document.querySelector('p');
+        para.style.fontSize = '30px';
+
+        document.addEventListener("keydown", e => {
+            var sizeAsInteger = parseInt(para.style.fontSize, 10);
+            if (e.key == "i") {
+                sizeAsInteger += 10;
+            }
+            else if (e.key == "d") {
+                sizeAsInteger -= 10;
+            }
+            para.style.fontSize = sizeAsInteger + 'px';
+        });
+            
+
+        document.removeEventListener("keydown", e)
+        
+
+        
+    </script>
+
+</body>
+</html>
